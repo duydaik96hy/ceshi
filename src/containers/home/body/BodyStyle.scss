@@ -1,0 +1,220 @@
+$color: #ff6700;
+$color-gray: #b0b0b0;
+
+.disable-btn {
+    color: rgba($color: $color-gray, $alpha: 0.2) !important;
+    cursor: default;
+}
+
+.active-tab {
+    color: $color;
+    border-bottom: 2px solid $color;
+}
+
+.translate {
+    transition: all 0.3s linear;
+
+    &:hover {
+        transform: translate3d(0, -3px, 0);
+        box-shadow: 0 1rem 2rem rgba($color: white, $alpha: 0.2);
+        -webkit-box-shadow: 0 1rem 2rem rgba($color: black, $alpha: 0.1);
+    }
+}
+
+.body {
+    margin-top: 1.5rem;
+    span {
+        &:hover {
+            transition: all 0.3s linear;
+            color: $color;
+        }
+    }
+    .container {
+        input {
+            display: inline-block;
+            width: 200px;
+            height: 30px;
+            padding-left: 0.5rem;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .title {
+            border-bottom: 4px solid rgb(168, 150, 34);
+            padding-bottom: 0.8rem;
+            margin-bottom: 1rem;
+            > div {
+                overflow: hidden;
+                h3 {
+                    color: rgb(46, 65, 89);
+                    font-size: 28px;
+                    font-weight: 800;
+                    margin: 0;
+                    position: relative;
+                    transition: all linear 0.15s;
+                    &:hover {
+                        transform: translate3d(0, -2.2rem, 0);
+                    }
+
+                    &::before {
+                        content: attr(data-hover);
+                        font-weight: 400;
+                        display: block;
+                        position: absolute;
+                        bottom: -2.2rem;
+                        transition: all linear 0.15s;
+                    }
+                }
+            }
+        }
+
+        .live-stream {
+            width: 100%;
+            height: 45.1875rem;
+            border: 1px solid rgb(187, 187, 187);
+            border-radius: 0.4rem;
+            background-color: white;
+            position: relative;
+
+            > div:first-child {
+                > span {
+                    display: inline-block;
+                    width: 6.625rem;
+                    height: 6.625rem;
+                    position: absolute;
+                    z-index: 999;
+                    &:nth-child(1) {
+                        top: -0.33rem;
+                        left: -0.3rem;
+                        background: url("/assets/8.png") no-repeat top left;
+                        background-size: cover;
+                    }
+                    &:nth-child(2) {
+                        top: -0.33rem;
+                        right: -0.3rem;
+                        background: url("/assets/7.png") no-repeat top right;
+                        background-size: cover;
+                    }
+                    &:nth-child(3) {
+                        bottom: -0.33rem;
+                        left: -0.3rem;
+                        background: url("/assets/10.png") no-repeat top left;
+                        background-size: cover;
+                    }
+                    &:nth-child(4) {
+                        bottom: -0.33rem;
+                        right: -0.3rem;
+                        background: url("/assets/9.png") no-repeat top right;
+                        background-size: cover;
+                    }
+                }
+            }
+
+            .banner {
+                .banner-title {
+                    width: 100%;
+                    align-items: baseline;
+                    justify-content: space-between;
+                    h3 {
+                        margin-left: 2rem;
+                        width: 22.0625rem;
+                    }
+
+                    p {
+                        width: 39.25rem;
+                        margin-right: 4rem;
+                    }
+                }
+            }
+
+            .carousel {
+                width: 100%;
+                height: 38.625rem;
+
+                .left {
+                    width: 56.06rem;
+                    height: 100%;
+                    margin: 0 1rem 1rem;
+                    background: url("/assets/video.png") no-repeat 100% 100%;
+                    background-size: cover;
+                }
+
+                .right {
+                    width: 15.3125rem;
+                    height: 100%;
+                    flex-direction: column;
+                    margin-bottom: 1rem;
+
+                    > div {
+                        width: 100%;
+                        height: 8.5625rem;
+                    }
+                }
+            }
+        }
+
+        .hot {
+            margin-top: 2rem;
+
+            .items {
+                height: 10.5rem;
+                .list {
+                    width: 67.25rem;
+                    height: 100%;
+                    margin-right: 1.375rem;
+
+                    > div {
+                        width: 14.3125rem;
+                        height: 10.5rem;
+                        background-color: rgb(106, 105, 105);
+                        border-radius: 0.4rem;
+                        box-shadow: 0 5px 15px gray;
+                    }
+                }
+                .detail {
+                    text-align: center;
+                    line-height: 10.5rem;
+                    width: 5.75rem;
+                    height: 100%;
+                    font-size: 1.75rem;
+                    color: white;
+                    background-color: rgb(106, 105, 105);
+                    border-radius: 0.4rem;
+                }
+            }
+        }
+
+        .streamer {
+            margin-top: 2rem;
+
+            .list-items {
+                width: 100%;
+                margin-bottom: 3rem;
+                overflow: hidden;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 17.8125rem);
+                grid-template-rows: repeat(auto-fill, 15.1875rem);
+                gap: 1rem;
+
+                .item {
+                    font-size: 1rem;
+                    > div {
+                        img {
+                            margin-right: 1rem;
+                            margin-top: 0.5rem;
+                            border: 1px solid gray;
+                            border-radius: 2rem;
+                        }
+                    }
+                    h4 {
+                        margin: 0.5rem 0;
+                        &:hover {
+                            color: $color;
+                            transition: all 0.1s linear;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
